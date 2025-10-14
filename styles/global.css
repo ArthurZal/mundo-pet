@@ -33,11 +33,39 @@
 
     --font-family: "Inter", sans-serif;
     --paragraph-md: 500 .875rem/1.5rem var(--font-family);
-    --paragraph-sm: 500 .75/1rem var(--font-family);
+    --paragraph-sm: 500 0.75rem/1rem var(--font-family);
     --label-lg: 700 1rem/1.5rem var(--font-family);
     --label-md: 700 .875rem/1.5rem var(--font-family);
     --label-sm: 700 .75rem/1rem var(--font-family);
     --link: 500 .75rem/1rem var(--font-family);        
 
-
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--background-primary);
+    color: var(--content-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    color: var(--content-primary);
+    font: var(--title);
+}
+
+p {
+    font: var(--paragraph-md);
+    color: var(--content-secondary);
+}
+
+.disable {
+    display: none;
+}
+
+
+
