@@ -5,9 +5,238 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Mundo pet</title>
   </head>
-  <body></body>
+  <body>
+    <div class="logo-app">
+      <a href="#">
+        <img src="assets/icons/icone-main.svg" alt="icone de pet" />
+      </a>
+    </div>
+
+    <div class="app-container">
+      <main>
+        <div class="header">
+          <div class="header-description">
+            <h1>Sua agenda</h1>
+            <p>
+              Aqui você pode ver todos os clientes e serviços agendados para
+              hoje.
+            </p>
+          </div>
+
+          <input type="date" name="date" id="date" />
+        </div>
+        <div class="schedules-periods">
+          <div class="period morning-period">
+            <div class="header">
+              <div class="period-title">
+                <img src="./assets/icons/solar-icon.svg" alt="icone de sol" />
+                <strong>Manhã</strong>
+              </div>
+              <span> 09h-12h </span>
+            </div>
+            <ul class="schedules-list">
+              <!-- <li>
+                <div class="details">
+                  <strong class="hour">09:00</strong>
+                  <strong class="pet-name">Thor</strong>
+                  <p class="tutor-name">Fernanda Costa</p>
+                </div>
+
+                <p class="procediment">Vacinação</p>
+
+                <button class="remove">Remover agendamento</button>
+              </li> -->
+
+              <!-- <li>
+                <div class="details">
+                  <strong class="hour">09:00</strong>
+                  <strong class="pet-name">Thor</strong>
+                  <p class="tutor-name">Fernanda Costa</p>
+                </div>
+
+                <p class="procediment">Vacinação</p>
+
+                <button class="remove">Remover agendamento</button>
+              </li> -->
+            </ul>
+          </div>
+
+          <div class="period afternoon-period">
+            <div class="header">
+              <div class="period-title">
+                <img
+                  src="./assets/icons/afternoon-icon.svg"
+                  alt="icone de nuvem e sol"
+                />
+                <strong>Tarde</strong>
+              </div>
+              <span> 13h-18h </span>
+            </div>
+            <ul class="schedules-list">
+              <!-- <li>
+                <div class="details">
+                  <strong class="hour">09:00</strong>
+                  <strong class="pet-name">Thor</strong>
+                  <p class="tutor-name">Fernanda Costa</p>
+                </div>
+
+                <p class="procediment">Vacinação</p>
+
+                <button class="remove">Remover agendamento</button>
+              </li>
+
+              <li>
+                <div class="details">
+                  <strong class="hour">09:00</strong>
+                  <strong class="pet-name">Thor</strong>
+                  <p class="tutor-name">Fernanda Costa</p>
+                </div>
+
+                <p class="procediment">Vacinação</p>
+
+                <button class="remove">Remover agendamento</button>
+              </li> -->
+            </ul>
+          </div>
+
+          <div class="period nigth-period">
+            <div class="header">
+              <div class="period-title">
+                <img src="./assets/icons/cloud-icon.svg" alt="ícone de lua" />
+                <strong>Noite</strong>
+              </div>
+              <span> 19h-21h </span>
+            </div>
+            <ul class="schedules-list">
+              <!-- <li>
+                <div class="details">
+                  <strong class="hour">09:00</strong>
+                  <strong class="pet-name">Thor</strong>
+                  <p class="tutor-name">Fernanda Costa</p>
+                </div>
+
+                <p class="procediment">Vacinação</p>
+
+                <button class="remove">Remover agendamento</button>
+              </li>
+
+              <li>
+                <div class="details">
+                  <strong class="hour">09:00</strong>
+                  <strong class="pet-name">Thor</strong>
+                  <p class="tutor-name">Fernanda Costa</p>
+                </div>
+
+                <p class="procediment">Vacinação</p>
+
+                <button class="remove">Remover agendamento</button>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="new-schedule">
+          <button>Novo agendamento</button>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal-container disable">
+      <div class="modal">
+        <img
+          src="./assets/close-icon.svg"
+          alt="ícone de fechar aba"
+          class="close-icon"
+        />
+
+        <div class="form-introduction">
+          <h1>Agende um atendimento</h1>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+
+        <form>
+          <div class="input-wrapper">
+            <label for="tutor-name">Nome do tutor</label>
+            <div class="input-container">
+              <img src="./assets/icons/person-icon.svg" alt="icone social" />
+              <input type="text" name="" id="tutor-name" required />
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="pet-name">Nome do pet</label>
+            <div class="input-container">
+              <img
+                src="./assets/icons/pet-icon.svg"
+                alt="icone de uma pata de animal"
+              />
+              <input type="text" name="pet-name" id="pet-name" required />
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="tel">Telefone</label>
+            <div class="input-container">
+              <img
+                src="./assets/icons/tel-icon.svg"
+                alt="icone de telefone roxo"
+              />
+              <input type="tel" name="tel" id="tel" required />
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="service-description">Descrição do serviço</label>
+            <div class="input-container">
+              <textarea
+                name="service-description"
+                id="service-description"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="date-hour">
+            <div class="input-wrapper">
+              <label for="date">Data</label>
+              <div class="input-container">
+                <img
+                  src="./assets/icons/calendar-icon.svg"
+                  alt="icone de calendario"
+                />
+                <input type="date" name="date" id="date" required />
+              </div>
+            </div>
+
+            <div class="select-wrapper">
+              <label for="hour">Hora</label>
+              <div class="input-container">
+                <img
+                  src="./assets/icons/calendar-icon.svg"
+                  alt="icone de calendario"
+                />
+                <select name="hour" id="hour" required>
+                  <option value="">9:00</option>
+                  <option value="">9:00</option>
+                  <option value="">9:00</option>
+                  <option value="">9:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button id="send-form">Agendar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
