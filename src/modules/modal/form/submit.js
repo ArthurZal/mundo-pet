@@ -1,6 +1,4 @@
 import { createNewSchedule } from "../../schedule/create-schedule";
-import dayjs from "dayjs";
-import { dateToday } from "../../../utility/dateToday.js";
 
 const form = document.querySelector("form");
 const inputTutorName = document.querySelector("#tutor-name");
