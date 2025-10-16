@@ -15,3 +15,8 @@ export async function getSchedules() {
     console.log("Não foi possível buscar os agendamentos.", error);
   }
 }
+
+export async function getSchedulesByDate(date) {
+  const schedules = await getSchedules();
+  return schedules.filter((schedule) => schedule.date === date);
+}

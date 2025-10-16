@@ -1,23 +1,22 @@
 import { createItem } from "../../utility/createItem";
-import { getSchedules } from "./get-schedules";
+import { getSchedulesByDate } from "./get-schedules";
 
 const morningSchedules = document.querySelector(".morning");
 const afternoonSchedules = document.querySelector(".afternoon");
 const eveningSchedules = document.querySelector(".evening");
+const inputDate = document.getElementById("date-menu");
 
-export async function showSchedules(date) {
+export async function showSchedules() {
   try {
     morningSchedules.innerHTML = "";
     afternoonSchedules.innerHTML = "";
     eveningSchedules.innerHTML = "";
 
-    const schedules = await getSchedules();
+    const dateToday = inputDate.value;
 
-    const schedulesToday = schedules.filter(
-      (schedule) => schedule.date === date
-    );
+    const schedules = await getSchedulesByDate(dateToday);
 
-    schedulesToday.forEach((schedule) => {
+    schedules.forEach((schedule) => {
       const li = createItem(schedule);
 
       const hour = schedule.time.slice(0, 2);
