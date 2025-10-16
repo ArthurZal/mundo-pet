@@ -1,15 +1,6 @@
 {
   "schedules": [
     {
-      "id": "596b",
-      "tutorName": "Arthur Oliveira",
-      "petName": "Clarinha",
-      "tel": "24999820071",
-      "serviceDescription": "Banho e tosa",
-      "date": "2025-10-16",
-      "time": "16:00"
-    },
-    {
       "id": "9f49",
       "tutorName": "Andresa Oliveira",
       "petName": "Pyke",

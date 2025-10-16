@@ -6,3 +6,4 @@ import './modules/page-load.js';
 import './modules/modal/open-modal.js';
 import './modules/modal/form/submit.js';
 import './modules/schedule/show-schedules.js';
+import './modules/schedule/remove-schedule.js';
