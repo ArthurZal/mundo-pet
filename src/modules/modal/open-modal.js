@@ -1,4 +1,4 @@
-import { defineHours} from "./form/define-hours.js";
+import { setDate } from "./form/define-date.js";
 
 const openModalButton = document.querySelector(".open-modal-button");
 const closeModalButton = document.querySelector(".close-icon");
@@ -8,7 +8,7 @@ const form = document.querySelector("form");
 openModalButton.addEventListener("click", () => {
     modalContainer.classList.remove("disable")
     form.reset();
-    defineHours(); 
+    setDate();
 });
 
 closeModalButton.addEventListener("click", () => {
