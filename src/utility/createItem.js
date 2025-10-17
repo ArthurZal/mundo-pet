@@ -1,26 +1,31 @@
+import { removeSchedule } from "../modules/schedule/remove-schedule";
+
 export function createItem(schedule) {
-    const li = document.createElement("li");
-        const div = document.createElement("div");
-        const hour = document.createElement("strong");
-        const petName = document.createElement("strong");
-        const tutorName = document.createElement("p");
-        const procediment = document.createElement("p");
-        const removeButton = document.createElement("button");
+  const li = document.createElement("li");
+  const div = document.createElement("div");
+  const hour = document.createElement("strong");
+  const petName = document.createElement("strong");
+  const tutorName = document.createElement("p");
+  const procediment = document.createElement("p");
+  const removeButton = document.createElement("button");
 
-        hour.innerText = schedule.time;
-        petName.innerText = schedule.petName;
-        tutorName.innerText = schedule.tutorName;
-        procediment.innerText = schedule.serviceDescription;
-        removeButton.innerText = "Remover agendamento";
+  hour.innerText = schedule.time;
+  petName.innerText = schedule.petName;
+  tutorName.innerText = schedule.tutorName;
+  procediment.innerText = schedule.serviceDescription;
+  removeButton.innerText = "Remover agendamento";
 
-        div.appendChild(hour);
-        div.appendChild(petName);
-        div.appendChild(tutorName);
-        div.classList.add("details");
+  div.appendChild(hour);
+  div.appendChild(petName);
+  div.appendChild(tutorName);
+  div.classList.add("details");
 
-        li.appendChild(div);
-        li.appendChild(procediment);
-        li.appendChild(removeButton);
+  li.appendChild(div);
+  li.appendChild(procediment);
+  li.appendChild(removeButton);
+  li.setAttribute("data-id", schedule.id);
 
-        return li;
+  removeButton.classList.add("remove");
+
+  return li;
 }
