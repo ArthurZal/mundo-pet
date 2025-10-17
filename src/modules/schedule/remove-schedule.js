@@ -12,7 +12,4 @@ export async function removeSchedule(id) {
         alert("Não foi possível remover o agendamento.");
         console.log(error);
     }
-
 }
-
-removeSchedule("596b");
