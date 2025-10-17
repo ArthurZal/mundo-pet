@@ -10,8 +10,8 @@ export async function defineHours() {
 
   const selectedDate = inputDate.value;
   
-  const eschedulesTotal = await getSchedulesByDate(selectedDate);
-  const unvailableHours = eschedulesTotal.map((schedule) => schedule.time);
+  const schedulesTotal = await getSchedulesByDate(selectedDate);
+  const unvailableHours = schedulesTotal.map((schedule) => schedule.time);
   
   const availableHours = hours.filter(
     (hour) => !unvailableHours.includes(hour)
