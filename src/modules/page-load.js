@@ -9,4 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
   dateInput.addEventListener("change", (e) => {
     showSchedules();
   });
+
 });
